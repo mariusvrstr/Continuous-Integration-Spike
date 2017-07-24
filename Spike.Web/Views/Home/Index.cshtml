@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "CI - Login Page";
+    Layout = "~/Views/shared/_Layout.cshtml";
+}
+
+<div class="container">
+    
+    <div class="jumbotron">
+        <h1>Login Simulator</h1>
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3">Username</div>
+                <div class="col-sm-5"><input type="text" id="username" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">Password</div>
+                <div class="col-sm-5"><input type="password" id="password" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-5"><i><span id="outcome"></span></i></div>
+            </div>
+        </div>
+
+        <p><a class="btn btn-lg btn-success" href="#" role="button" onclick="Login()">Login</a></p>
+    </div>   
+
+</div>
+
+@section Scripts
+{
+    <script type="text/javascript">
+
+        function LoginCallback(ajaxData) {
+            console.info("Received attempted login response.");
+            console.log(ajaxData);
+
+            var isLoggedIn = ajaxData.LoggedIn;
+
+            console.log(isLoggedIn);
+
+            if (isLoggedIn) {
+                $('#outcome').text("*Successfully logged in.");
+            } else {
+                $('#outcome').text("*Failed to log in.");
+            }
+        }
+
+        function Login() {
+            $('#outcome').text("");
+            console.info("Attempting to log in..");
+
+            var postData = {
+                username: $('#username').val(),
+                password: $('#password').val()
+            };
+
+            $.post("/Home/Login", postData, LoginCallback);
+        }
+
+     
+    </script>
+}

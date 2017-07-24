@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContinuousIntegrationTests", "ContinuousIntegrationTests\ContinuousIntegrationTests.csproj", "{90907B0B-9BE9-4A85-9837-4A5A36423701}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{73601ACB-710F-4751-9A4E-255EC992A7B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Mid Tier", "2. Mid Tier", "{E8A15633-8CA1-4A6E-806E-3C2D90AB391A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. DAL", "3. DAL", "{E7C57C03-D721-45B4-987B-2ED3D9AD4DB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Testing", "4. Testing", "{2CB4F18D-F831-4A97-9A7D-AF08A86A80FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spike.Web", "Spike.Web\Spike.Web.csproj", "{AEFAF6F5-9402-4EAC-89B2-7980789620AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spike.Contracts", "Spike.Contracts\Spike.Contracts.csproj", "{41043CAA-B8B2-4D99-9151-A5D1F32B4F60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spike.Stubs", "Spike.OrchestrationStubs\Spike.Stubs.csproj", "{6E33DAFB-E5B4-4936-84CD-32D93D2CF9B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90907B0B-9BE9-4A85-9837-4A5A36423701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90907B0B-9BE9-4A85-9837-4A5A36423701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90907B0B-9BE9-4A85-9837-4A5A36423701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90907B0B-9BE9-4A85-9837-4A5A36423701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEFAF6F5-9402-4EAC-89B2-7980789620AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEFAF6F5-9402-4EAC-89B2-7980789620AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEFAF6F5-9402-4EAC-89B2-7980789620AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEFAF6F5-9402-4EAC-89B2-7980789620AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41043CAA-B8B2-4D99-9151-A5D1F32B4F60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41043CAA-B8B2-4D99-9151-A5D1F32B4F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41043CAA-B8B2-4D99-9151-A5D1F32B4F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41043CAA-B8B2-4D99-9151-A5D1F32B4F60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E33DAFB-E5B4-4936-84CD-32D93D2CF9B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E33DAFB-E5B4-4936-84CD-32D93D2CF9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E33DAFB-E5B4-4936-84CD-32D93D2CF9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E33DAFB-E5B4-4936-84CD-32D93D2CF9B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90907B0B-9BE9-4A85-9837-4A5A36423701} = {2CB4F18D-F831-4A97-9A7D-AF08A86A80FA}
+		{AEFAF6F5-9402-4EAC-89B2-7980789620AF} = {73601ACB-710F-4751-9A4E-255EC992A7B6}
+		{41043CAA-B8B2-4D99-9151-A5D1F32B4F60} = {E8A15633-8CA1-4A6E-806E-3C2D90AB391A}
+		{6E33DAFB-E5B4-4936-84CD-32D93D2CF9B9} = {2CB4F18D-F831-4A97-9A7D-AF08A86A80FA}
+	EndGlobalSection
+EndGlobal
