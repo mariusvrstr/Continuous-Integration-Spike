@@ -133,11 +133,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <Content Include="publish\ApplicationInsights.config" />
-    <None Include="publish\packages.config" />
-    <Content Include="publish\Web.config" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="publish\Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
@@ -171,11 +167,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="publish\bin\" />
-    <Folder Include="publish\Content\" />
-    <Folder Include="publish\fonts\" />
-    <Folder Include="publish\Scripts\" />
-    <Folder Include="publish\Views\" />
+    <Folder Include="publish\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Spike.OrchestrationStubs\Spike.Stubs.csproj">
