@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContinuousIntegrationTests", "ContinuousIntegrationTests\ContinuousIntegrationTests.csproj", "{90907B0B-9BE9-4A85-9837-4A5A36423701}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spike.Contracts", "Spike.Contracts\Spike.Contracts.csproj", "{41043CAA-B8B2-4D99-9151-A5D1F32B4F60}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spike.Stubs", "Spike.OrchestrationStubs\Spike.Stubs.csproj", "{6E33DAFB-E5B4-4936-84CD-32D93D2CF9B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spike.App", "Spike.App\Spike.App.csproj", "{1EE08015-CBC2-419A-B620-1A74EDB24E8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{6E33DAFB-E5B4-4936-84CD-32D93D2CF9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E33DAFB-E5B4-4936-84CD-32D93D2CF9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E33DAFB-E5B4-4936-84CD-32D93D2CF9B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EE08015-CBC2-419A-B620-1A74EDB24E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EE08015-CBC2-419A-B620-1A74EDB24E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EE08015-CBC2-419A-B620-1A74EDB24E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EE08015-CBC2-419A-B620-1A74EDB24E8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,9 @@ Global
 		{AEFAF6F5-9402-4EAC-89B2-7980789620AF} = {73601ACB-710F-4751-9A4E-255EC992A7B6}
 		{41043CAA-B8B2-4D99-9151-A5D1F32B4F60} = {E8A15633-8CA1-4A6E-806E-3C2D90AB391A}
 		{6E33DAFB-E5B4-4936-84CD-32D93D2CF9B9} = {2CB4F18D-F831-4A97-9A7D-AF08A86A80FA}
+		{1EE08015-CBC2-419A-B620-1A74EDB24E8A} = {73601ACB-710F-4751-9A4E-255EC992A7B6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {552E5237-C4E5-42EC-9914-C5137292F037}
 	EndGlobalSection
 EndGlobal
