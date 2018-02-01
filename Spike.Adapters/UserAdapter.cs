@@ -1,11 +1,12 @@
 ﻿
 namespace Spike.Adapters
 {
+    using Spike.Adapters.Contracts;
     using Spike.Adapters.Database;
     using Spike.Contracts.Entities;
     using System.Linq;
 
-    public class UserAdapter
+    public class UserAdapter : IUserAdapter
     {
         public UserEntity AddUser(UserEntity newUser)
         {
