@@ -1,19 +1,24 @@
 ﻿
-namespace Spike.Tests
+namespace Spike.Tests.TypesOfTesting
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Spike.Stubs.Orchestrations;
+    using Spike.Contracts;
+    using Spike.SDK;
 
     [TestClass]
-    public class OrchestrationTests
+    public class OrchestrationStubbedTests : BaseTestClass
     {
+        public OrchestrationStubbedTests() : base(ResolveBy.StubbedVersion) {}
+
+        ISecurityOrchestration securityOrchestration { get; set; }
+
         [TestMethod]
         public void TestUserLoginMustSucceed()
         {
             var username = "UsernameThatWillFail";
             var password = "password";
 
-            var orchestrator = new SecurityOrchestrationStub();
+            var orchestrator = UnityFactory.Resolve<ISecurityOrchestration>(TypeOfResolver);
             var response = orchestrator.Login(username, password);
 
             Assert.IsFalse(response, "A username that contains the word fail must fail");
@@ -25,7 +30,7 @@ namespace Spike.Tests
             var username = "UsernameThatWillSucceed";
             var password = "password";
 
-            var orchestrator = new SecurityOrchestrationStub();
+            var orchestrator = UnityFactory.Resolve<ISecurityOrchestration>(TypeOfResolver);
             var response = orchestrator.Login(username, password);
 
             Assert.IsTrue(response, "A username that contains does not contain fail must succeed");
