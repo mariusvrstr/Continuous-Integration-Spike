@@ -48,7 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseTestClass.cs" />
+    <Compile Include="OrchestrationFactory.cs" />
     <Compile Include="TypesOfTesting\OrchestrationIntegrationTests.cs" />
     <Compile Include="TypesOfTesting\OrchestrationStubbedTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

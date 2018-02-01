@@ -6,10 +6,8 @@ namespace Spike.Tests.TypesOfTesting
     using Spike.SDK;
 
     [TestClass]
-    public class OrchestrationStubbedTests : BaseTestClass
+    public class OrchestrationStubbedTests
     {
-        public OrchestrationStubbedTests() : base(ResolveBy.Default) {}
-
         ISecurityOrchestration securityOrchestration { get; set; }
 
         [TestMethod]
@@ -18,7 +16,7 @@ namespace Spike.Tests.TypesOfTesting
             var username = "UsernameThatWillFail";
             var password = "password";
 
-            var orchestrator = UnityFactory.Resolve<ISecurityOrchestration>();
+            var orchestrator = OrchestrationFactory.CreateSecurityOrchestration(true, false);
             var response = orchestrator.Login(username, password);
 
             Assert.IsFalse(response, "A username that contains the word fail must fail");
@@ -30,7 +28,7 @@ namespace Spike.Tests.TypesOfTesting
             var username = "UsernameThatWillSucceed";
             var password = "password";
 
-            var orchestrator = UnityFactory.Resolve<ISecurityOrchestration>();
+            var orchestrator = OrchestrationFactory.CreateSecurityOrchestration(true, false);
             var response = orchestrator.Login(username, password);
 
             Assert.IsTrue(response, "A username that contains does not contain fail must succeed");
