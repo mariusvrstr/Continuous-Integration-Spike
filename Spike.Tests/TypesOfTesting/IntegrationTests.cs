@@ -7,12 +7,12 @@ namespace Spike.Tests.TypesOfTesting
     using Spike.SDK;
 
     [TestClass]
-    public class OrchestrationIntegrationTests
+    public class IntegrationTests
     {
         ISecurityOrchestration securityOrchestration { get; set; }
 
         [TestMethod]
-        public void TestUserLoginMustSucceed()
+        public void Integration_TestUserLoginMustSucceed()
         {
             var username = "UsernameThatWillFail";
             var password = "password";
@@ -24,7 +24,7 @@ namespace Spike.Tests.TypesOfTesting
         }
 
         [TestMethod]
-        public void TestUserLoginMustFail()
+        public void integration_TestUserLoginMustFail()
         {
             var username = "UsernameThatWillSucceed";
             var password = "password";

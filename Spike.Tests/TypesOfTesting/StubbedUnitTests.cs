@@ -6,12 +6,12 @@ namespace Spike.Tests.TypesOfTesting
     using Spike.SDK;
 
     [TestClass]
-    public class OrchestrationStubbedTests
+    public class StubbedUnitTests
     {
         ISecurityOrchestration securityOrchestration { get; set; }
 
         [TestMethod]
-        public void TestUserLoginMustSucceed()
+        public void Stubbed_TestUserLoginMustSucceed()
         {
             var username = "UsernameThatWillFail";
             var password = "password";
@@ -23,7 +23,7 @@ namespace Spike.Tests.TypesOfTesting
         }
 
         [TestMethod]
-        public void TestUserLoginMustFail()
+        public void Stubbed_TestUserLoginMustFail()
         {
             var username = "UsernameThatWillSucceed";
             var password = "password";

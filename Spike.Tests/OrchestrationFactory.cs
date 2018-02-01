@@ -12,7 +12,7 @@ namespace Spike.Tests
         {
             if (!useDI)
             {
-                return isStubbed ? (ISecurityOrchestration)new SecurityOrchestration() : (ISecurityOrchestration)new SecurityOrchestrationStub();
+                return isStubbed ? (ISecurityOrchestration)new SecurityOrchestrationStub() : (ISecurityOrchestration)new SecurityOrchestration();
 
             }
             else

@@ -44,13 +44,18 @@
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.1.1.18\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OrchestrationFactory.cs" />
-    <Compile Include="TypesOfTesting\OrchestrationIntegrationTests.cs" />
-    <Compile Include="TypesOfTesting\OrchestrationStubbedTests.cs" />
+    <Compile Include="TypesOfTesting\BasicUnitTests.cs" />
+    <Compile Include="TypesOfTesting\IntegrationTests.cs" />
+    <Compile Include="TypesOfTesting\MockedUnitTests.cs" />
+    <Compile Include="TypesOfTesting\StubbedUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +63,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Spike.Adapters\Spike.Adapters.csproj">
+      <Project>{166cc3bf-1b76-4b25-a4df-1e963d76ca55}</Project>
+      <Name>Spike.Adapters</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Spike.Contracts\Spike.Contracts.csproj">
       <Project>{41043caa-b8b2-4d99-9151-a5d1f32b4f60}</Project>
       <Name>Spike.Contracts</Name>
