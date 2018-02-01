@@ -1,9 +1,9 @@
 ﻿
-namespace Spike.Tests.TypesOfTesting
+namespace Spike.Tests.Tests
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Rhino.Mocks;
-    using Spike.Contracts.Users;
+    using Spike.Adapters.Contracts;
     using Spike.Orchestrations;
 
     [TestClass]

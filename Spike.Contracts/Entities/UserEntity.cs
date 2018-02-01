@@ -1,9 +1,9 @@
 ﻿
-namespace Spike.Contracts.Users
+namespace Spike.Contracts.Entities
 {
     using System;
-    
-    public class User
+
+    public class UserEntity
     {
         public Guid Id { get; set; }
 
@@ -13,6 +13,6 @@ namespace Spike.Contracts.Users
 
         public string Username { get; set; }
 
-        public string Password { get; set; }
+        public string PasswordHash { get; set; }
     }
 }

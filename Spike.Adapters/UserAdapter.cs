@@ -1,21 +1,26 @@
 ﻿
 namespace Spike.Adapters
 {
-    using Spike.Contracts.Users;
-    using System;
+    using Spike.Adapters.Database;
+    using Spike.Contracts.Entities;
+    using System.Linq;
 
-    public class UserAdapter : IUserAdapter
+    public class UserAdapter
     {
-        public User AddUser(User newUser)
+        public UserEntity AddUser(UserEntity newUser)
         {
-            ///TODO: This needs to go to the databse
-            throw new NotImplementedException();
+            var updatedUser = Context.Users.Add(newUser);
+            return updatedUser;
         }
 
         public string GetPasswordHash(string username)
         {
-            ///TODO: This needs to go to the databse
-            throw new NotImplementedException();
+            return Context.Users.FirstOrDefault(u => u.Username == username)?.PasswordHash;
         }
+
+        private IDataContext context { get; set; }
+        protected IDataContext Context { get => context ?? (context = ContextFactory.Create()); }
+
+        public int SaveChanges() => Context.SaveChanges();
     }
 }

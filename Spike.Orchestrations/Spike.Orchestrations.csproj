@@ -44,6 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Spike.Adapters\Spike.Adapters.csproj">
+      <Project>{166CC3BF-1B76-4B25-A4DF-1E963D76CA55}</Project>
+      <Name>Spike.Adapters</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Spike.Contracts\Spike.Contracts.csproj">
       <Project>{41043caa-b8b2-4d99-9151-a5d1f32b4f60}</Project>
       <Name>Spike.Contracts</Name>

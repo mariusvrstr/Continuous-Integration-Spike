@@ -1,10 +1,9 @@
 ﻿
 namespace Spike.Orchestrations
 {
+    using Spike.Adapters.Contracts;
     using Spike.Contracts;
-    using Spike.Contracts.Users;
     using Spike.SDK;
-    using System;
 
     public class SecurityOrchestration : ISecurityOrchestration
     {
