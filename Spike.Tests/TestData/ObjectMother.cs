@@ -22,17 +22,12 @@ namespace Spike.Tests.TestData
                 }
 
                 instance = new ObjectMother();
-                instance.Initialize();
+                instance.Refresh();
 
                 return instance;
             }
         }
-
-        private void Initialize()
-        {
-            Users = new UserEntities();
-        }
-        
+       
         public static void Flush()
         {
             var context = new DataContext();
@@ -42,14 +37,16 @@ namespace Spike.Tests.TestData
                 context.Database.ExecuteSqlCommand("delete from UserEntities");
                 context.SaveChanges();
 
-                instance = null;
+                instance = new ObjectMother();
             }          
         }
 
         public bool Refresh()
         {
-            instance = new ObjectMother();
-            instance.Initialize();
+            if (Users == null)
+            {
+                Users = new UserEntities();
+            }
 
             return true;
         }
