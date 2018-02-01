@@ -1,7 +1,6 @@
 ﻿
 namespace Spike.Orchestrations
 {
-    using Spike.Adapters.Contracts;
     using Spike.Contracts;
     using Spike.SDK;
 

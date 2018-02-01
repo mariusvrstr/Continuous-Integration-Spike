@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Entities\UserEntity.cs" />
     <Compile Include="ISecurityOrchestration.cs" />
+    <Compile Include="IUserAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users\User.cs" />
   </ItemGroup>

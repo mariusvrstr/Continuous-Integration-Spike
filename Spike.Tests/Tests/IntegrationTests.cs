@@ -3,6 +3,7 @@ namespace Spike.Tests.Tests
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Spike.Contracts;
+    using Spike.Tests.Builders;
 
     [TestClass]
     public class IntegrationTests : TransactionBase
@@ -12,25 +13,23 @@ namespace Spike.Tests.Tests
         [TestMethod]
         public void Integration_TestUserLoginMustSucceed()
         {
-            var username = "UsernameThatWillFail";
-            var password = "password";
+            var builder = new UserEntityBuilder().John();
 
             var orchestrator = OrchestrationFactory.CreateSecurityOrchestration(false, false);
-            var response = orchestrator.Login(username, password);
+            var response = orchestrator.Login(builder.Username, builder.Password);
 
-            Assert.IsFalse(response, "A username that contains the word fail must fail");
+            Assert.IsTrue(response, "The password is wrong");
         }
 
         [TestMethod]
         public void integration_TestUserLoginMustFail()
         {
-            var username = "UsernameThatWillSucceed";
-            var password = "password";
+            var builder = new UserEntityBuilder().John();
 
             var orchestrator = OrchestrationFactory.CreateSecurityOrchestration(false, false);
-            var response = orchestrator.Login(username, password);
+            var response = orchestrator.Login(builder.Username, "Wrong password");
 
-            Assert.IsTrue(response, "A username that contains does not contain fail must succeed");
+            Assert.IsFalse(response, "The password is wrong");
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Spike.Tests
         {
             if (!IsInitialized)
             {
+                ObjectMother.Flush();
                 ObjectMother.Instance.Refresh();
             }
             

@@ -1,10 +1,12 @@
 ﻿
 namespace Spike.Tests.TestData
 {
-    using Spike.Adapters.Contracts;
+    using Spike.Adapters.Database;
+    using Spike.Contracts;
     using Spike.Contracts.Entities;
     using Spike.SDK;
     using Spike.Tests.Builders;
+    using System.Linq;
 
     public class ObjectMother
     {
@@ -24,16 +26,31 @@ namespace Spike.Tests.TestData
 
                 return instance;
             }
-
         }
 
         private void Initialize()
         {
             Users = new UserEntities();
         }
+        
+        public static void Flush()
+        {
+            var context = new DataContext();
+
+            if (context.Users.Any())
+            {
+                context.Database.ExecuteSqlCommand("delete from UserEntities");
+                context.SaveChanges();
+
+                instance = null;
+            }          
+        }
 
         public bool Refresh()
         {
+            instance = new ObjectMother();
+            instance.Initialize();
+
             return true;
         }
 

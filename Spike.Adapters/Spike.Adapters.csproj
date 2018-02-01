@@ -50,7 +50,6 @@
     <Compile Include="Database\ContextFactory.cs" />
     <Compile Include="Database\DataContext.cs" />
     <Compile Include="Database\IDataContext.cs" />
-    <Compile Include="Contracts\IUserAdapter.cs" />
     <Compile Include="UserAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -65,4 +64,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>

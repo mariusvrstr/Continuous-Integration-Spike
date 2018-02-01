@@ -3,7 +3,7 @@ namespace Spike.Tests.Tests
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Rhino.Mocks;
-    using Spike.Adapters.Contracts;
+    using Spike.Contracts;
     using Spike.Orchestrations;
 
     [TestClass]

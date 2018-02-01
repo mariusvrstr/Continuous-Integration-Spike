@@ -1,5 +1,5 @@
 ﻿
-namespace Spike.Adapters.Contracts
+namespace Spike.Contracts
 {
     using Spike.Contracts.Entities;
 

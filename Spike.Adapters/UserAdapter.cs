@@ -1,7 +1,7 @@
 ﻿
 namespace Spike.Adapters
 {
-    using Spike.Adapters.Contracts;
+    using Spike.Contracts;
     using Spike.Adapters.Database;
     using Spike.Contracts.Entities;
     using System.Linq;
