@@ -1,9 +1,8 @@
 ﻿
-using Spike.Stubs.Orchestrations;
-
-namespace ContinuousIntegrationTests
+namespace Spike.Tests
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Spike.Stubs.Orchestrations;
 
     [TestClass]
     public class OrchestrationTests
