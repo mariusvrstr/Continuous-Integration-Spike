@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spike.Tests", "Spike.Tests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spike.Adapters", "Spike.Adapters\Spike.Adapters.csproj", "{166CC3BF-1B76-4B25-A4DF-1E963D76CA55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseDeployment", "DatabaseDeployment\DatabaseDeployment.csproj", "{C62B6D77-C3EB-428F-9D13-FFC4141A46FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{166CC3BF-1B76-4B25-A4DF-1E963D76CA55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{166CC3BF-1B76-4B25-A4DF-1E963D76CA55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{166CC3BF-1B76-4B25-A4DF-1E963D76CA55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C62B6D77-C3EB-428F-9D13-FFC4141A46FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C62B6D77-C3EB-428F-9D13-FFC4141A46FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C62B6D77-C3EB-428F-9D13-FFC4141A46FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C62B6D77-C3EB-428F-9D13-FFC4141A46FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +84,7 @@ Global
 		{4E75B6FA-D27B-4D9F-8B7E-438E3CE25305} = {E8A15633-8CA1-4A6E-806E-3C2D90AB391A}
 		{7E4DA7B3-8968-4C53-A3D2-7438293CF64E} = {2CB4F18D-F831-4A97-9A7D-AF08A86A80FA}
 		{166CC3BF-1B76-4B25-A4DF-1E963D76CA55} = {E7C57C03-D721-45B4-987B-2ED3D9AD4DB9}
+		{C62B6D77-C3EB-428F-9D13-FFC4141A46FC} = {E7C57C03-D721-45B4-987B-2ED3D9AD4DB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {552E5237-C4E5-42EC-9914-C5137292F037}
